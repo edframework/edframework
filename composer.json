@@ -1,0 +1,27 @@
+{
+    "name": "edframework/edframework",
+    "type": "project",
+	"description" : "Le framework Ed.",
+	"keywords" : ["ed", "framework", "edframework", "php", "php7", "development", "ed framework", "Togo", "Afrique"],
+    "require": {
+        "php": ">=7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
+    },
+	"autoload": {
+        "psr-4": {
+            "Edogawa\\Core\\": "core/",
+            "Edogawa\\App\\": "app/",
+            "Edogawa\\Helpers\\": "helpers/",
+            "Edogawa\\Librairies\\": "librairies/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cedric SOEDJEDE",
+            "email": "conanedogawa595@gmail.com"
+        }
+    ]
+}

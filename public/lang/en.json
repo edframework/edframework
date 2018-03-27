@@ -1,0 +1,53 @@
+{
+  "index" : {
+    "title" : "CodeStorming"
+  },
+  "admin" : {
+    "title" : "CodeStorming Administration"
+  },
+  "Generator" : {
+    "genControllerTitle" : "Controller Generator",
+    "genCRUDTitle" : "CRUD Generator",
+    "genModelTitle" : "Model",
+    "genTableTitle" : "Table Generator",
+    "genViewTitle" : "View generator",
+    "controllerLib" : "Controller label",
+    "modelLib" : "Model label",
+    "viewLib" : "View label",
+    "showAllFile" : "Files list",
+    "folderTree" : "Folders tree",
+    "filename" : "Filename",
+    "foldername" : "Folder name",
+    "placeholderDefaultPage" : "Default page's name",
+    "viewPath" : "Path from Vue folder",
+    "placeholderDefaultViewPath" : "Default Vues/",
+    "createFolder" : "Create folder",
+    "definePath" : "Define path",
+    "content" : "Content",
+    "DB" : "Database",
+    "chooseDB" : "Choose Database",
+    "chooseTable" : "Choose table",
+    "chooseElt" : "Choose element",
+    "successGen" : "success generated",
+    "successTable" : "Class success generated",
+    "successView" : "View success generated",
+    "alreadyExist" : "already exist",
+    "show" : "Show",
+    "generate" : "generate",
+    "dberr" : "Incorrect Database",
+    "DbOrTableErr" : "Incorrect Database or Table",
+    "error" : "Error, contact Administrator",
+    "errGenView" : "Error in view generation",
+    "missParam" : "Missing paramas",
+    "missClass" : "Generate class first",
+    "cancel" : "Cancel",
+    "genBtn" : "Generate"
+  },
+  "error404" : {
+    "title" : "Error 404",
+    "description" : "Page not Found",
+    "notFound" : "PAGE NOT FOUND",
+    "errorMsg" : "THE PAGE YOU'RE LOOKING FOR SEEMS NOT EXISTS",
+    "returnBtn" : "Go Back"
+  }
+}

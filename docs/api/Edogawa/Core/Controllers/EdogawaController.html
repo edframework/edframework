@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Edogawa\Core\Controllers\EdogawaController | EdFramework 1.0 API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Edogawa_Core_Controllers_EdogawaController" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">EdFramework 1.0 API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Edogawa.html">Edogawa</a></li><li class="backslash">\</li><li><a href="../../../Edogawa/Core.html">Core</a></li><li class="backslash">\</li><li><a href="../../../Edogawa/Core/Controllers.html">Controllers</a></li><li class="backslash">\</li><li>EdogawaController</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            EdogawaController
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>EdogawaController</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Classe EdogawaController</p>            <p>Le coeur du traitement du framework</p>                    </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_layout">
+                                        protected                                        string
+                </td>
+                <td>$layout</td>
+                <td class="last">Le layout du contenu à afficher</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_className">
+                                        protected                                        string
+                </td>
+                <td>$className</td>
+                <td class="last">La nom de la classe dans laquelle cette classe est appélée
+Ex : La classe Generator fait appele à celle ci par un extends donc
+className aura comme valeur Generator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_classPath">
+                                        protected                                        string
+                </td>
+                <td>$classPath</td>
+                <td class="last">Le nom de la classe avec le namespace</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_currentModel">
+                                        protected                                        <abbr title="Edogawa\App\Modeles\:class">:class</abbr>
+                </td>
+                <td>$currentModel</td>
+                <td class="last">La dernière classe Modèle chargée</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_currentHelper">
+                                        protected                                        <abbr title="Edogawa\Helpers\:class">:class</abbr>
+                </td>
+                <td>$currentHelper</td>
+                <td class="last">L'instance du dernier helper chargé</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_currentController">
+                                        protected                                        <abbr title="Edogawa\App\Controllers\:class">:class</abbr>
+                </td>
+                <td>$currentController</td>
+                <td class="last">L'instance du dernier controller chargé</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_currentCore">
+                                        protected                                        <abbr title="Edogawa\Core\:class">:class</abbr>
+                </td>
+                <td>$currentCore</td>
+                <td class="last">L'instance du dernier core chargé</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_currentLibrairies">
+                                        protected                                        <abbr title="Edogawa\Core\Controllers\:class">:class</abbr>
+                </td>
+                <td>$currentLibrairies</td>
+                <td class="last">L'instace de la dernière librairie chargée</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_beforeView">
+                                        protected                                        array
+                </td>
+                <td>$beforeView</td>
+                <td class="last">Le template Html a chargé avant le chargement de la vue à rendre</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_afterView">
+                                        protected                                        array
+                </td>
+                <td>$afterView</td>
+                <td class="last">Le template php a chargé après le chargement de la vue à rendre</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___CONSTRUCT">__CONSTRUCT</a>()
+        
+                                            <p>EdogawaController constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Edogawa/Core/Html/VueInterface.html"><abbr title="Edogawa\Core\Html\VueInterface">VueInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_vue">vue</a>()
+        
+                                            <p>La classe de pour les éléments utiles</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Edogawa/Core/Html/FormInterface.html"><abbr title="Edogawa\Core\Html\FormInterface">FormInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_form">form</a>()
+        
+                                            <p>La classe de génération de formulaire</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_erreur">erreur</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Edogawa/Core/Html/HtmlInterface.html"><abbr title="Edogawa\Core\Html\HtmlInterface">HtmlInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_html">html</a>()
+        
+                                            <p>La classe de génération Html</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Edogawa/Core/Security/SecurityInterface.html"><abbr title="Edogawa\Core\Security\SecurityInterface">SecurityInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_security">security</a>()
+        
+                                            <p>La classe qui sécurise les entrées cliente</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Edogawa/Core/Security/CryptageInterface.html"><abbr title="Edogawa\Core\Security\CryptageInterface">CryptageInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_cryptage">cryptage</a>()
+        
+                                            <p>Fournit quelques méthodes de cryptage</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Edogawa/Core/Validator/ValidationInterface.html"><abbr title="Edogawa\Core\Validator\ValidationInterface">ValidationInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_validator">validator</a>()
+        
+                                            <p>Fournit les méthodes de validation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Edogawa\App\Modeles\:class">:class</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadModel">loadModel</a>(string $modele = null)
+        
+                                            <p>Charger le modèle passé en paramètre</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Edogawa\App\Modeles\:class">:class</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_model">model</a>()
+        
+                                            <p>Retourne le modèle courant</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Edogawa\Core\:class">:class</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadCore">loadCore</a>(string $core)
+        
+                                            <p>Charge le Core indiqué dans le paramètre</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Edogawa\Core\:class">:class</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_core">core</a>()
+        
+                                            <p>Retourne le core courant</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadLibrary">loadLibrary</a>(string $library)
+        
+                                            <p>Retourne la librairie passée en paramètre</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_library">library</a>()
+        
+                                            <p>Retourne la librairie courante</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Edogawa\Helpers\:class">:class</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadHelper">loadHelper</a>(string $helper)
+        
+                                            <p>Retourne le helper passé en paramètre</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Edogawa\Helpers\:class">:class</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_helper">helper</a>()
+        
+                                            <p>Retourne le helper courant</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Edogawa\App\Controllers\:class">:class</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadController">loadController</a>(string $controller)
+        
+                                            <p>Retourne le controller passé en paramètre</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Edogawa\App\Controllers\:class">:class</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_controller">controller</a>()
+        
+                                            <p>Retourne le controller courant</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_render">render</a>(string $vue, array $data = [])
+        
+                                            <p>Retourne le contenu de la page à afficher</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLayout">getLayout</a>()
+        
+                                            <p>Retourne le layout applicable dans le render</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Edogawa/Core/Controllers/EdogawaController.html"><abbr title="Edogawa\Core\Controllers\EdogawaController">EdogawaController</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setLayout">setLayout</a>(string $layout)
+        
+                                            <p>Définit un layout à la vue</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBeforeView">getBeforeView</a>()
+        
+                                            <p>Retourne le tableau d'inclusion avant la vue</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Edogawa/Core/Controllers/EdogawaController.html"><abbr title="Edogawa\Core\Controllers\EdogawaController">EdogawaController</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setBeforeView">setBeforeView</a>(string $beforeView)
+        
+                                            <p>Définit l'ensemble des inclusions avant la vue</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAfterView">getAfterView</a>()
+        
+                                            <p>Retourne l'ensemble des inclusions après la vue</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Edogawa/Core/Controllers/EdogawaController.html"><abbr title="Edogawa\Core\Controllers\EdogawaController">EdogawaController</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAfterView">setAfterView</a>(string $afterView)
+        
+                                            <p>Définit l'ensemble des inclusions après la vue</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___CONSTRUCT">
+        <div class="location">at         line 119</div>
+        <code>                    
+    <strong>__CONSTRUCT</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>EdogawaController constructor.</p>                    <p>Définition du nom de la classe sans et avec namespace</p>                            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_vue">
+        <div class="location">at         line 132</div>
+        <code>                    <a href="../../../Edogawa/Core/Html/VueInterface.html"><abbr title="Edogawa\Core\Html\VueInterface">VueInterface</abbr></a>
+    <strong>vue</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>La classe de pour les éléments utiles</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Edogawa/Core/Html/VueInterface.html"><abbr title="Edogawa\Core\Html\VueInterface">VueInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_form">
+        <div class="location">at         line 143</div>
+        <code>                    <a href="../../../Edogawa/Core/Html/FormInterface.html"><abbr title="Edogawa\Core\Html\FormInterface">FormInterface</abbr></a>
+    <strong>form</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>La classe de génération de formulaire</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Edogawa/Core/Html/FormInterface.html"><abbr title="Edogawa\Core\Html\FormInterface">FormInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_erreur">
+        <div class="location">at         line 148</div>
+        <code>                    
+    <strong>erreur</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_html">
+        <div class="location">at         line 158</div>
+        <code>                    <a href="../../../Edogawa/Core/Html/HtmlInterface.html"><abbr title="Edogawa\Core\Html\HtmlInterface">HtmlInterface</abbr></a>
+    <strong>html</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>La classe de génération Html</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Edogawa/Core/Html/HtmlInterface.html"><abbr title="Edogawa\Core\Html\HtmlInterface">HtmlInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_security">
+        <div class="location">at         line 169</div>
+        <code>                    <a href="../../../Edogawa/Core/Security/SecurityInterface.html"><abbr title="Edogawa\Core\Security\SecurityInterface">SecurityInterface</abbr></a>
+    <strong>security</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>La classe qui sécurise les entrées cliente</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Edogawa/Core/Security/SecurityInterface.html"><abbr title="Edogawa\Core\Security\SecurityInterface">SecurityInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cryptage">
+        <div class="location">at         line 180</div>
+        <code>                    <a href="../../../Edogawa/Core/Security/CryptageInterface.html"><abbr title="Edogawa\Core\Security\CryptageInterface">CryptageInterface</abbr></a>
+    <strong>cryptage</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Fournit quelques méthodes de cryptage</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Edogawa/Core/Security/CryptageInterface.html"><abbr title="Edogawa\Core\Security\CryptageInterface">CryptageInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validator">
+        <div class="location">at         line 191</div>
+        <code>                    <a href="../../../Edogawa/Core/Validator/ValidationInterface.html"><abbr title="Edogawa\Core\Validator\ValidationInterface">ValidationInterface</abbr></a>
+    <strong>validator</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Fournit les méthodes de validation</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Edogawa/Core/Validator/ValidationInterface.html"><abbr title="Edogawa\Core\Validator\ValidationInterface">ValidationInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadModel">
+        <div class="location">at         line 203</div>
+        <code>                    <abbr title="Edogawa\App\Modeles\:class">:class</abbr>
+    <strong>loadModel</strong>(string $modele = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Charger le modèle passé en paramètre</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$modele</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Edogawa\App\Modeles\:class">:class</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_model">
+        <div class="location">at         line 216</div>
+        <code>                    <abbr title="Edogawa\App\Modeles\:class">:class</abbr>
+    <strong>model</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retourne le modèle courant</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Edogawa\App\Modeles\:class">:class</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadCore">
+        <div class="location">at         line 228</div>
+        <code>                    <abbr title="Edogawa\Core\:class">:class</abbr>
+    <strong>loadCore</strong>(string $core)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Charge le Core indiqué dans le paramètre</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$core</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Edogawa\Core\:class">:class</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_core">
+        <div class="location">at         line 241</div>
+        <code>                    <abbr title="Edogawa\Core\:class">:class</abbr>
+    <strong>core</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retourne le core courant</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Edogawa\Core\:class">:class</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadLibrary">
+        <div class="location">at         line 253</div>
+        <code>                    mixed
+    <strong>loadLibrary</strong>(string $library)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retourne la librairie passée en paramètre</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$library</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_library">
+        <div class="location">at         line 265</div>
+        <code>                    mixed
+    <strong>library</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retourne la librairie courante</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadHelper">
+        <div class="location">at         line 276</div>
+        <code>                    <abbr title="Edogawa\Helpers\:class">:class</abbr>
+    <strong>loadHelper</strong>(string $helper)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retourne le helper passé en paramètre</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$helper</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Edogawa\Helpers\:class">:class</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_helper">
+        <div class="location">at         line 288</div>
+        <code>                    <abbr title="Edogawa\Helpers\:class">:class</abbr>
+    <strong>helper</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retourne le helper courant</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Edogawa\Helpers\:class">:class</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadController">
+        <div class="location">at         line 299</div>
+        <code>                    <abbr title="Edogawa\App\Controllers\:class">:class</abbr>
+    <strong>loadController</strong>(string $controller)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retourne le controller passé en paramètre</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$controller</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Edogawa\App\Controllers\:class">:class</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_controller">
+        <div class="location">at         line 311</div>
+        <code>                    <abbr title="Edogawa\App\Controllers\:class">:class</abbr>
+    <strong>controller</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retourne le controller courant</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Edogawa\App\Controllers\:class">:class</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_render">
+        <div class="location">at         line 324</div>
+        <code>                    string
+    <strong>render</strong>(string $vue, array $data = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retourne le contenu de la page à afficher</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$vue</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLayout">
+        <div class="location">at         line 435</div>
+        <code>                    string
+    <strong>getLayout</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retourne le layout applicable dans le render</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setLayout">
+        <div class="location">at         line 446</div>
+        <code>                    <a href="../../../Edogawa/Core/Controllers/EdogawaController.html"><abbr title="Edogawa\Core\Controllers\EdogawaController">EdogawaController</abbr></a>
+    <strong>setLayout</strong>(string $layout)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Définit un layout à la vue</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$layout</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Edogawa/Core/Controllers/EdogawaController.html"><abbr title="Edogawa\Core\Controllers\EdogawaController">EdogawaController</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBeforeView">
+        <div class="location">at         line 457</div>
+        <code>                    array
+    <strong>getBeforeView</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retourne le tableau d'inclusion avant la vue</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBeforeView">
+        <div class="location">at         line 468</div>
+        <code>                    <a href="../../../Edogawa/Core/Controllers/EdogawaController.html"><abbr title="Edogawa\Core\Controllers\EdogawaController">EdogawaController</abbr></a>
+    <strong>setBeforeView</strong>(string $beforeView)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Définit l'ensemble des inclusions avant la vue</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$beforeView</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Edogawa/Core/Controllers/EdogawaController.html"><abbr title="Edogawa\Core\Controllers\EdogawaController">EdogawaController</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAfterView">
+        <div class="location">at         line 479</div>
+        <code>                    array
+    <strong>getAfterView</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retourne l'ensemble des inclusions après la vue</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAfterView">
+        <div class="location">at         line 490</div>
+        <code>                    <a href="../../../Edogawa/Core/Controllers/EdogawaController.html"><abbr title="Edogawa\Core\Controllers\EdogawaController">EdogawaController</abbr></a>
+    <strong>setAfterView</strong>(string $afterView)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Définit l'ensemble des inclusions après la vue</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$afterView</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Edogawa/Core/Controllers/EdogawaController.html"><abbr title="Edogawa\Core\Controllers\EdogawaController">EdogawaController</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

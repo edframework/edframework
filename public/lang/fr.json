@@ -1,0 +1,53 @@
+{
+  "index" : {
+    "title" : "CodeStorming"
+  },
+  "admin" : {
+    "title" : "Administration de CodeStorming"
+  },
+  "Generator" : {
+    "genControllerTitle" : "Générateur de controller",
+    "genCRUDTitle" : "Générateur de CRUD",
+    "genModelTitle" : "Générateur de Modèle",
+    "genTableTitle" : "Générateur de Table",
+    "genViewTitle" : "Générateur de Vue",
+    "controllerLib" : "Libellé controller",
+    "modelLib" : "Libellé modèle",
+    "ViewLib" : "Libellé vue",
+    "showAllFile" : "Liste des fichiers",
+    "folderTree" : "Arbre du dossier",
+    "filename" : "Nom du fichier",
+    "foldername" : "Nom du dossier",
+    "placeholderDefaultPage" : "Par défaut le nom de la page",
+    "viewPath" : "Chemin à partir du dossier Vue",
+    "placeholderDefaultViewPath" : "Par defaut Vues/",
+    "createFolder" : "Créer un dossier",
+    "definePath" : "Définir un chemin",
+    "content" : "Contenu",
+    "DB" : "Base de données",
+    "chooseDB" : "Choisissez une Base de Données",
+    "chooseTable" : "Choisissez une table",
+    "chooseElt" : "Selectionnez un élément",
+    "successGen" : "généré avec succès",
+    "successTable" : "Classe générée avec succès",
+    "successView" : "Vue générée avec succès",
+    "alreadyExist" : "déjà présent",
+    "show" : "Afficher",
+    "generate" : "générer",
+    "dberr" : "Base de donnees incorrecte",
+    "DbOrTableErr" : "Base de données ou table incorrect",
+    "error" : "Erreur, contactez l'administrateur",
+    "errGenView" : "Erreur lors de la génération de la vue",
+    "missParam" : "Paramètre(s) manquant(s)",
+    "missClass" : "Veuillez d'abord générer la classe de la table sélectionnée",
+    "cancel" : "Annuler",
+    "genBtn" : "Générer"
+  },
+  "error404" : {
+    "title" : "Erreur 404",
+    "description" : "Page d'erreur",
+    "notFound" : "PAGE NON TROUVEE",
+    "errorMsg" : "LA PAGE QUE VOUS RECHERCHER N'EXISTE PAS",
+    "returnBtn" : "Retourner"
+  }
+}

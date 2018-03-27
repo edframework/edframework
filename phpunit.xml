@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php"
+         colors="true"
+		 convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         verbose="true"
+         stopOnFailure="false">
+    <testsuites>
+        <testsuite name="Test suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <const name="DEFAULT_DATABASE" value="db"/>
+        <const name="URL_CASE_SENSITIVE" value="false"/>
+        <const name="SHA_KEY" value="103db4dc6a7b4e0db5aabd1b1ee955b7"/>
+        <const name="WROOT" value="http://localhost/EdFramework-1.0/"/>
+        <post name="postvar" values="valeur"/>
+        <get name="getvar" values="valeur"/>
+        <request name="getvar" values="valeur"/>
+    </php>
+</phpunit>
